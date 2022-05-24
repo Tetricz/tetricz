@@ -12,3 +12,10 @@ rm -r IPMITool/jre
 sed -i 's/\jre\/bin\/java/\/usr\/bin\/java/g' IPMITool/SMCIPMITool.lax
 echo "Test run"
 ./IPMITool/SMCIPMITool
+if [ $? -eq 182 ]; then
+    echo "Ran correctly - moving to bin folder"
+    sudo mv -v IPMITool/* /usr/bin/
+    exit 0
+else
+    echo "Something went wrong...."
+fi
