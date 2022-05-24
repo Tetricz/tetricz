@@ -8,13 +8,17 @@ echo "Downloading IPMITool"
 curl -L https://link.us1.storjshare.io/s/jvh6kbc3pdgqzpt5pxls3or55nsq/files/tools/SMCIPMITool_2.26.0_build.220209_bundleJRE_Linux_x64.tar.gz?download=1 --output ./IPMITool.tar.gz
 tar -xvf ./IPMITool.tar.gz
 mv -v SMCIPMITool_2* IPMITool
-rm -r ./IPMITool/jre
-sed -i 's/\jre\/bin\/java/\/usr\/bin\/java/g' ./IPMITool/SMCIPMITool.lax
+rm -r IPMITool/jre
+sed -i 's/\jre\/bin\/java/\/usr\/bin\/java/g' IPMITool/SMCIPMITool.lax
 echo "Test run"
 ./IPMITool/SMCIPMITool
 if [ $? -eq 182 ]; then
-    echo "Ran correctly removing tarfile"
-    rm -v ./IPMITool.tar.gz
+    echo "Ran correctly - moving to bin folder"
+    sudo mv -v IPMITool /usr/bin/IPMITool
+    rm -vr IPMITool*
+    cp -v /etc/profile /tmp/profile
+    echo "export PATH=/usr/bin/IPMITool:\$PATH" >> /tmp/profile
+    sudo cp -v /tmp/profile /etc/profile
     exit 0
 else
     echo "Something went wrong...."
