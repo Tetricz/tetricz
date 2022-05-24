@@ -15,7 +15,9 @@ echo "Test run"
 if [ $? -eq 182 ]; then
     echo "Ran correctly - moving to bin folder"
     sudo mv -v IPMITool/* /usr/bin/
+    rm -vr IPMITool*
     exit 0
 else
     echo "Something went wrong...."
+    exit 1
 fi
