@@ -11,8 +11,12 @@ echo "Starting build process"
 docker buildx build --build-arg OPENJDK_VERSION=24 --platform linux/amd64 -f "Dockerfile" -t tetricz/nextcloud:amd64$timevar --no-cache .
 echo "Pushing images to DockerHub"
 docker push tetricz/nextcloud:amd64$timevar
+
 docker manifest create tetricz/nextcloud:latest tetricz/nextcloud:amd64$timevar --amend
+docker manifest create tetricz/nextcloud:24 tetricz/nextcloud:amd64$timevar --amend
+
 docker manifest push --purge tetricz/nextcloud:latest
+docker manifest push --purge tetricz/nextcloud:24
 echo "Cleaning up files"
 docker buildx prune -fa
 cd ..

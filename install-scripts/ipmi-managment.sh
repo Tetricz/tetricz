@@ -19,6 +19,7 @@ if [ $? -eq 182 ]; then
     cp -v /etc/profile /tmp/profile
     echo "export PATH=/usr/bin/IPMITool:\$PATH" >> /tmp/profile
     sudo cp -v /tmp/profile /etc/profile
+    echo "Run using \"SMCIPMITool\""
     exit 0
 else
     echo "Something went wrong...."
