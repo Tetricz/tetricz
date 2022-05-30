@@ -13,7 +13,9 @@ docker buildx build --platform linux/amd64 -f "Dockerfile" -t tetricz/minecraft:
 echo "Pushing images to DockerHub"
 docker push tetricz/minecraft:amd64$timevar
 docker manifest create tetricz/minecraft:fabric-auto tetricz/minecraft:amd64$timevar --amend
+docker manifest create tetricz/minecraft:fabric-auto-1.18.2 tetricz/minecraft:amd64$timevar --amend
 docker manifest push --purge tetricz/minecraft:fabric-auto
+docker manifest push --purge tetricz/minecraft:fabric-auto-1.18.2
 echo "Cleaning up files"
 docker buildx prune -fa
 cd ..
