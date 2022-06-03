@@ -14,7 +14,7 @@ docker buildx build --build-arg SDK_VERSION=6.0 --build-arg RUNTIME_VERSION=6.0 
 echo "Pushing images to DockerHub"
 docker push tetricz/techdns:amd64$timevar
 docker push tetricz/techdns:arm64$timevar
-docker push tetricz/techdns:arm32$timevar
+#docker push tetricz/techdns:arm32$timevar
 #docker push tetricz/techdns:armv7$timevar tetricz/techdns:armv7$timevar
 docker manifest create tetricz/techdns:latest tetricz/techdns:arm64$timevar tetricz/techdns:amd64$timevar --amend
 docker manifest create tetricz/techdns:8.12 tetricz/techdns:arm64$timevar tetricz/techdns:amd64$timevar --amend
