@@ -8,7 +8,7 @@ cd nextcloud-docker
 echo "Enable multi-architecture support"
 docker run --privileged --rm docker/binfmt:a7996909642ee92942dcd6cff44b9b95f08dad64
 echo "Starting build process"
-docker buildx build --build-arg OPENJDK_VERSION=24 --platform linux/amd64 -f "Dockerfile" -t tetricz/nextcloud:amd64$timevar --no-cache .
+docker buildx build --build-arg NC_VERSION=24 --platform linux/amd64 -f "Dockerfile" -t tetricz/nextcloud:amd64$timevar --no-cache .
 echo "Pushing images to DockerHub"
 docker push tetricz/nextcloud:amd64$timevar
 
