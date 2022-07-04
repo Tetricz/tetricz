@@ -17,9 +17,9 @@ docker push tetricz/techdns:arm64$timevar
 #docker push tetricz/techdns:arm32$timevar
 #docker push tetricz/techdns:armv7$timevar tetricz/techdns:armv7$timevar
 docker manifest create tetricz/techdns:latest tetricz/techdns:arm64$timevar tetricz/techdns:amd64$timevar --amend
-docker manifest create tetricz/techdns:8.13 tetricz/techdns:arm64$timevar tetricz/techdns:amd64$timevar --amend
+docker manifest create tetricz/techdns:8.1.4 tetricz/techdns:arm64$timevar tetricz/techdns:amd64$timevar --amend
 docker manifest push --purge tetricz/techdns:latest
-docker manifest push --purge tetricz/techdns:8.13
+docker manifest push --purge tetricz/techdns:8.1.4
 echo "Cleaning up files"
 docker buildx prune -fa
 cd ..
