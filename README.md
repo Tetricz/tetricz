@@ -2,17 +2,17 @@
 
 ## Hi there 👋
 
-<!--
-**Tetricz/tetricz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+My pronouns are he/him/his.
 
-Here are some ideas to get you started:
+I'm currently a student at the University of Houston, studying for a Bachelor's of Science in CS.  
+I enjoy long walks on the beach, and I'm a big fan of the color blue.  
+This is basically being written by GitHub's CoPilot, so I'm not sure how much of it is actually me.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Projects
+
+I'm currently working on a crate for Rust that allows you to easily create your own number systems and convert between them.  
+There's also the things I've worked on for the UnRaid community, which I continue to maintain.
+
+[Portfolio](https://www.tetricz.com)
+
+You can reach me by [email](mailto:DavidLeeDaniels@protonmail.com) if you have any opportunities or offers for me.
