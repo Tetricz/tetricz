@@ -11,7 +11,7 @@ docker run --privileged --rm docker/binfmt:a7996909642ee92942dcd6cff44b9b95f08da
 echo "Starting build process"
 docker buildx build -f "Dockerfile" -t tetricz/se7encracker:amd64$timevar --no-cache .
 echo "Pushing images to DockerHub"
-docker push tetricz/minecraft:amd64$timevar
+docker push tetricz/se7encracker:amd64$timevar
 docker manifest create tetricz/se7encracker:latest tetricz/se7encracker:amd64$timevar --amend
 docker manifest push --purge tetricz/se7encracker:latest
 echo "Cleaning up files"
