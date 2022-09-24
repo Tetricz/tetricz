@@ -5,14 +5,13 @@
 My pronouns are he/him/his.
 
 I'm currently a student at the University of Houston, studying for a Bachelor's of Science in CS.  
-I enjoy long walks on the beach, and I'm a big fan of the color blue.  
-This is basically being written by GitHub's CoPilot, so I'm not sure how much of it is actually me.
+I have a particular interest in distrubuted systems, and decentralized applications.
 
 ### Projects
 
-I'm currently working on a crate for Rust that allows you to easily create your own number systems and convert between them.  
-There's also the things I've worked on for the UnRaid community, which I continue to maintain.
+* myFile(WIP name) - a file explorer for all platforms, with search and cloud integrations
+* StrawberryKO - a simple, automated way to manage your water, light and more for indoor plants
 
-[Portfolio](https://www.tetricz.com)
+[Site](https://www.tetricz.com)
 
 You can reach me by [email](mailto:DavidLeeDaniels@protonmail.com) if you have any opportunities or offers for me.
