@@ -18,5 +18,6 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 # Add user to docker group
+groupadd docker
 sudo usermod -aG docker $USER
 echo "Please log out and log back in to apply changes or reload shell"
