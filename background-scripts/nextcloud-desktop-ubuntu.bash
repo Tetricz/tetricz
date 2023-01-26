@@ -57,7 +57,8 @@ function verify_image () {
 
 function launch_image () {
     echo "Launching image"
-    ./Nextcloud*.AppImage
+    launch=$(ls Nextcloud*.AppImage | sed 's/.*\/\([^\/]*\)/\1/')
+    ./$launch
 }
 
 # Main
