@@ -6,12 +6,19 @@
 # Tests whether github is pingable/online
 # Since the cdn is github
 function test_connection () {
-    echo "Testing connection"
     if ! ping -qc 1 -W 2 github.com &>/dev/null; then
-        echo "No connection to github.com"
-        exit 1
+        echo "${failed_attempts}: No connection to github.com"
+        let failed_attempts+=1
+        if [[ $failed_attempts -gt 10 ]]; then
+            echo "Failed to connect to github.com"
+            echo "Exiting"
+            exit 1
+        fi
+        sleep 2s
+        test_connection
+    else
+        echo "OK 200"
     fi
-    echo "OK 200"
 }
 
 # Download the latest version of the AppImage
@@ -39,8 +46,15 @@ function verify_image () {
     gpg --verify Nextcloud*.AppImage.asc Nextcloud*.AppImage
 }
 
+function launch_image () {
+    echo "Launching image"
+    ./Nextcloud*.AppImage
+}
 
 # Main
+# Sleeps for 15 seconds to allow computer to start
+let failed_attempts=1
+echo "Testing connection"
 test_connection
 nextcloud_pub_key
 #Split .AppImage and .AppImage.asc into a list
@@ -72,6 +86,4 @@ else
 fi
 
 verify_image
-
-# Run the AppImage
-./Nextcloud*.AppImage
+launch_image
