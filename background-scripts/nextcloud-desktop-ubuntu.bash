@@ -3,6 +3,12 @@
 # Then add this script to either yor crontab or systemd timer such that it starts after boot/login
 # You may also need to install libfuse2(sudo apt install libfuse2)
 
+# I like to store my AppImages in a folder called .apps
+# Feel free to change it
+APP_PATH="$(pwd)/.apps/"
+mkdir $APP_PATH
+cd $APP_PATH
+
 # Tests whether github is pingable/online
 # Since the cdn is github
 function test_connection () {
@@ -43,7 +49,10 @@ function nextcloud_pub_key () {
 # Verify the AppImage
 function verify_image () {
     echo "Verifying image"
-    gpg --verify Nextcloud*.AppImage.asc Nextcloud*.AppImage
+    if ! gpg --verify Nextcloud*.AppImage.asc Nextcloud*.AppImage &>/dev/null; then
+    	echo "Verification failed"
+    	exit 1;
+    fi
 }
 
 function launch_image () {
