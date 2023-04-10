@@ -16,6 +16,7 @@ echo \
 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+sudo apt-get install qemu-user-static binfmt-support -y
 
 # Add user to docker group
 sudo groupadd docker
