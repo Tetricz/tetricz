@@ -9,9 +9,6 @@ I have a particular interest in distrubuted systems, and decentralized applicati
 
 ### Projects
 
-* StarDrive - a universal file explorer for all platforms with cloud integrations
-* StrawberryKO - a simple, automated way to manage your water, light and more for indoor plants
+* SimpleSync - Simple, easy to use, and secure file synchronization.
 
-[Site](https://www.tetricz.com)
-
-You can reach me by [email](mailto:DavidLeeDaniels@protonmail.com) if you have any opportunities or offers for me.
+You can reach me by Github issues, [Linkedin](https://www.linkedin.com/in/david-daniels-9715a324a), or [email](mailto:DavidLeeDaniels@protonmail.com)
