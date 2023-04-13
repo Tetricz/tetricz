@@ -1,11 +1,11 @@
-# Tetricz
+# David Daniels
 
 ## Hi there 👋
 
 My pronouns are he/him/his.
 
 I'm currently a student at the University of Houston, studying for a Bachelor's of Science in CS.
-I have a particular interest in distrubuted systems, and decentralized applications.
+I have a particular interest in various software systems.
 
 ### Projects
 
