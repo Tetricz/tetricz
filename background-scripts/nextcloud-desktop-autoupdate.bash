@@ -5,7 +5,7 @@
 
 # I like to store my AppImages in a folder called .apps
 # Feel free to change it
-APP_PATH="$(pwd)/.apps/"
+APP_PATH="$(pwd)/bin/"
 mkdir $APP_PATH
 cd $APP_PATH
 
