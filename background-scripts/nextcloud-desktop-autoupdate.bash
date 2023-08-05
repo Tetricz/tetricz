@@ -5,8 +5,8 @@
 
 # I like to store my AppImages in a folder called .apps
 # Feel free to change it
-APP_PATH="$(pwd)/bin/"
-mkdir $APP_PATH
+APP_PATH="$HOME/bin/"
+mkdir -p $APP_PATH
 cd $APP_PATH
 
 # Tests whether github is pingable/online
@@ -68,7 +68,7 @@ echo "Testing connection"
 test_connection
 nextcloud_pub_key
 #Split .AppImage and .AppImage.asc into a list
-nc_links=$(curl -s https://api.github.com/repos/nextcloud/desktop/releases/latest | grep -i 'browser_download_url.*\.AppImage' | sed 's/.*\(http.*\)"/\1/')
+nc_links=$(curl -s https://api.github.com/repos/nextcloud-releases/desktop/releases/latest | grep -i 'browser_download_url.*\.AppImage' | sed 's/.*\(http.*\)"/\1/')
 appimage=$(echo $nc_links | cut -f1 -d" ")
 imageasc=$(echo $nc_links | cut -f2 -d" ")
 
